@@ -1,5 +1,5 @@
 # 💰 ỨNG DỤNG QUẢN LÝ SỔ TIẾT KIỆM
-## 📌 Giới thiệu thành viên
+## 📌 Giới thiệu thành viên - Nhóm 09
 |Tên thành viên | Mã số sinh viên |
 |---------------|-----------------|
 |Đào Ngọc Hà    | 3121411062 |
