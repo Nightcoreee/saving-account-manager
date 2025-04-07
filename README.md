@@ -169,6 +169,12 @@ Với giao diện trực quan, người dùng có thể:
     - `Send Email()`: Phương thức để gửi thông báo qua email.
 - **Mối quan hệ:**
     - Phụ thuộc vào `User` (để xác định người nhận).
+      
+### 9. `Tài khoản`
+- **Mô tả:** Đại diện cho username và password để người dùng có thể đăng nhập vào hệ thống
+- **Thuộc tính:**
+    - `Username`: Tên tài khoản
+    - `Password`: Mật khẩu của tài khoản
 
 ## Mối Quan Hệ Giữa Các Lớp
 
@@ -177,7 +183,8 @@ Với giao diện trực quan, người dùng có thể:
     - `Saving Account` **1..1** -- **1..n** `Transaction`: Một tài khoản tiết kiệm có thể có nhiều giao dịch, và mỗi giao dịch thuộc về một tài khoản tiết kiệm.
     - `Transaction` **1..1** -- **1..1** `Receipt`: Mỗi giao dịch có thể có một biên lai liên quan, và mỗi biên lai liên quan đến một giao dịch.
     - `Saving Account` **1..1** -- **1..1** `InterestRateTerm`: Mỗi tài khoản tiết kiệm được liên kết với một kỳ hạn và lãi suất cụ thể.
-
+    - `Employee` **1..1** -- **1..1** `Tài khoản`: Mỗi nhân viên chỉ có 1 tài khoản duy nhất dùng để đăng nhập vào hệ thống quản lý
+      
 - **Phụ thuộc (Dependency):** Biểu thị một lớp sử dụng một lớp khác nhưng không sở hữu nó. Thường là một lớp gọi phương thức của lớp khác.
     - `User` sử dụng `System` (ví dụ: để gọi `Open Account()`).
     - `Employee` sử dụng `System` (ví dụ: để gọi `calculateInterest()`, `generateStatement()`).
