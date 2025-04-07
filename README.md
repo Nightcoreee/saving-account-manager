@@ -52,10 +52,91 @@ Với giao diện trực quan, người dùng có thể:
 
 ## Sơ đồ Use Case 
 ![image](https://github.com/user-attachments/assets/694fa503-6dce-4ab6-aa6a-a0a071731943)
+## Mô tả chi tiết sơ đồ UC
+## Các Tác Nhân (Actors)
+### 1. `Người dùng`
+- **Mô tả:** Đại diện cho khách hàng sử dụng ứng dụng để quản lý sổ tiết kiệm của họ.
+- **Tương tác với các Use Case:**
+    - `Mở sổ tiết kiệm`: Thực hiện thao tác mở một sổ tiết kiệm mới.
+    - `Gửi tiền vào sổ`: Thực hiện thao tác gửi tiền vào sổ tiết kiệm hiện có.
+    - `Rút tiền khỏi sổ`: Thực hiện thao tác rút tiền từ sổ tiết kiệm hiện có.
+    - `Đóng sổ tiết kiệm`: Thực hiện thao tác đóng một sổ tiết kiệm hiện có.
+    - `Xem lịch sử giao dịch`: Xem lại các giao dịch đã thực hiện trên sổ tiết kiệm.
+    - `Đăng nhập`: Thực hiện thao tác đăng nhập vào hệ thống để truy cập các chức năng.
 
+### 2. `Nhân viên`
+- **Mô tả:** Đại diện cho nhân viên ngân hàng sử dụng ứng dụng để thực hiện các nghiệp vụ liên quan đến quản lý sổ tiết kiệm.
+- **Tương tác với các Use Case:**
+    - `Mở sổ tiết kiệm`: Thực hiện thao tác mở sổ tiết kiệm cho khách hàng.
+    - `Gửi tiền vào sổ`: Thực hiện thao tác gửi tiền vào sổ tiết kiệm cho khách hàng.
+    - `Rút tiền khỏi sổ`: Thực hiện thao tác rút tiền từ sổ tiết kiệm cho khách hàng.
+    - `Đóng sổ tiết kiệm`: Thực hiện thao tác đóng sổ tiết kiệm cho khách hàng.
+    - `In biên lai`: Thực hiện thao tác in biên lai giao dịch cho khách hàng.
+    - `Thông báo về Gmail`: Thực hiện thao tác gửi thông báo giao dịch hoặc thông tin liên quan đến sổ tiết kiệm qua Gmail cho khách hàng.
+    - `Tính lãi suất`: Thực hiện thao tác tính toán lãi suất cho các sổ tiết kiệm.
+    - `Xem lịch sử giao dịch`: Xem lịch sử giao dịch của các sổ tiết kiệm.
+    - `Đăng nhập`: Thực hiện thao tác đăng nhập vào hệ thống để truy cập các chức năng nghiệp vụ.
+
+### 3. `Hệ thống`
+- **Mô tả:** Đại diện cho chính ứng dụng quản lý sổ tiết kiệm, thực hiện các tác vụ tự động hoặc theo yêu cầu của tác nhân.
+- **Tương tác với các Use Case:**
+    - `Tính lãi suất`: Thực hiện việc tính toán lãi suất định kỳ (có thể tự động hoặc do nhân viên kích hoạt).
+    - `Thông báo về Gmail`: Thực hiện việc gửi thông báo qua Gmail (thường được kích hoạt sau các giao dịch hoặc sự kiện nhất định).
+
+## Các Use Case (Chức Năng)
+
+### 1. `Mở sổ tiết kiệm`
+- **Mô tả:** Cho phép người dùng hoặc nhân viên tạo một sổ tiết kiệm mới trong hệ thống.
+- **Tác nhân chính:** `Người dùng`, `Nhân viên`
+
+### 2. `Gửi tiền vào sổ`
+- **Mô tả:** Cho phép người dùng hoặc nhân viên thực hiện giao dịch gửi tiền vào một sổ tiết kiệm đã tồn tại.
+- **Tác nhân chính:** `Người dùng`, `Nhân viên`
+- **Quan hệ:**
+    - `«include»` `In biên lai`: Sau khi gửi tiền thành công, hệ thống có thể bao gồm chức năng in biên lai.
+    - `«include»` `Thông báo về Gmail`: Sau khi gửi tiền thành công, hệ thống có thể bao gồm chức năng gửi thông báo qua Gmail.
+
+### 3. `Rút tiền khỏi sổ`
+- **Mô tả:** Cho phép người dùng hoặc nhân viên thực hiện giao dịch rút tiền từ một sổ tiết kiệm đã tồn tại.
+- **Tác nhân chính:** `Người dùng`, `Nhân viên`
+- **Quan hệ:**
+    - `«include»` `In biên lai`: Sau khi rút tiền thành công, hệ thống có thể bao gồm chức năng in biên lai.
+    - `«include»` `Thông báo về Gmail`: Sau khi rút tiền thành công, hệ thống có thể bao gồm chức năng gửi thông báo qua Gmail.
+
+### 4. `Đóng sổ tiết kiệm`
+- **Mô tả:** Cho phép người dùng hoặc nhân viên thực hiện thao tác đóng một sổ tiết kiệm hiện có.
+- **Tác nhân chính:** `Người dùng`, `Nhân viên`
+- **Quan hệ:**
+    - `«include»` `In biên lai`: Sau khi đóng sổ thành công, hệ thống có thể bao gồm chức năng in biên lai (ví dụ: biên lai tất toán).
+    - `«include»` `Thông báo về Gmail`: Sau khi đóng sổ thành công, hệ thống có thể bao gồm chức năng gửi thông báo qua Gmail.
+
+### 5. `In biên lai`
+- **Mô tả:** Cho phép nhân viên in biên lai cho các giao dịch như gửi tiền, rút tiền, đóng sổ.
+- **Tác nhân chính:** `Nhân viên`
+- **Quan hệ:**
+    - Được `«include»` bởi `Gửi tiền vào sổ`, `Rút tiền khỏi sổ`, `Đóng sổ tiết kiệm`.
+
+### 6. `Thông báo về Gmail`
+- **Mô tả:** Cho phép hệ thống gửi thông báo về các giao dịch hoặc thông tin liên quan đến sổ tiết kiệm cho người dùng qua Gmail.
+- **Tác nhân chính:** `Hệ thống`, `Nhân viên` (nhân viên có thể kích hoạt trong một số trường hợp)
+- **Quan hệ:**
+    - Được `«include»` bởi `Gửi tiền vào sổ`, `Rút tiền khỏi sổ`, `Đóng sổ tiết kiệm`.
+
+### 7. `Tính lãi suất`
+- **Mô tả:** Chức năng để hệ thống tự động hoặc nhân viên kích hoạt việc tính toán lãi suất cho các sổ tiết kiệm dựa trên kỳ hạn và số dư.
+- **Tác nhân chính:** `Hệ thống`, `Nhân viên`
+
+### 8. `Xem lịch sử giao dịch`
+- **Mô tả:** Cho phép người dùng hoặc nhân viên xem lại lịch sử các giao dịch đã thực hiện trên một sổ tiết kiệm cụ thể.
+- **Tác nhân chính:** `Người dùng`, `Nhân viên`
+
+### 9. `Đăng nhập`
+- **Mô tả:** Cho phép người dùng và nhân viên xác thực thông tin đăng nhập để truy cập vào hệ thống và các chức năng tương ứng.
+- **Tác nhân chính:** `Người dùng`, `Nhân viên`
+  
 ## Sơ đồ Class Diagram
 ![image](https://github.com/user-attachments/assets/c2951d2e-959e-4597-a664-065d5d6f112a)
-# Mô tả chi tiết sơ đồ
+# Mô tả chi tiết sơ đồ CD
 ## Các Lớp (Classes)
 
 ### 1. `System`
