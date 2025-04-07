@@ -50,6 +50,8 @@ Với giao diện trực quan, người dùng có thể:
 
 ⏳ **Tổng thời gian dự kiến**: 6-7 tuần  
 
+---
+
 ## Sơ đồ Use Case 
 ![image](https://github.com/user-attachments/assets/694fa503-6dce-4ab6-aa6a-a0a071731943)
 ## Mô tả chi tiết sơ đồ UC
@@ -133,7 +135,9 @@ Với giao diện trực quan, người dùng có thể:
 ### 9. `Đăng nhập`
 - **Mô tả:** Cho phép người dùng và nhân viên xác thực thông tin đăng nhập để truy cập vào hệ thống và các chức năng tương ứng.
 - **Tác nhân chính:** `Người dùng`, `Nhân viên`
-  
+
+---
+
 ## Sơ đồ Class Diagram
 ![image](https://github.com/user-attachments/assets/c2951d2e-959e-4597-a664-065d5d6f112a)
 # Mô tả chi tiết sơ đồ CD
