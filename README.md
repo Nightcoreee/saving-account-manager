@@ -50,3 +50,7 @@ Với giao diện trực quan, người dùng có thể:
 
 ⏳ **Tổng thời gian dự kiến**: 6-7 tuần  
 
+## Sơ đồ Use Case 
+
+## Sơ đồ Class Diagram
+![image](https://github.com/user-attachments/assets/10154cd2-bf16-4e9d-a1af-68d99c12db2a)
