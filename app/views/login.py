@@ -1,18 +1,20 @@
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
+import os 
 
 def login():
     username = username_entry.get()
     password = password_entry.get()
-    if username == "admin" and password == "123":
-        messagebox.showinfo("Success", "Login successful!")
+    if username == "admin" or password == "123":
+        messagebox.showinfo("Success", "Đăng nhập thành công!")
+        print("Login successful!")
     else:
-        messagebox.showerror("Error", "Invalid username or password")
+        messagebox.showerror("Error","Vui lòng nhập đầy đủ thông tin")
 
 def register():
-    messagebox.showinfo("Register", "Redirect to register form...")
-
+    os.system("python app/views/register.py")
+    
 root = tk.Tk()
 root.title("Trang đăng nhập")
 root.geometry("1000x500")
@@ -38,7 +40,7 @@ content_frame.pack(expand=True, fill=tk.BOTH, padx=40, pady=20)
 
 # welcome text
 welcome = tk.Label(content_frame, text="Welcome to the money savings book management", 
-                   font=("Time New Roman", 18, "bold"), fg="#cc9a35", bg="white", justify="left")
+                   font=("Times New Roman", 18, "bold"), fg="#cc9a35", bg="white", justify="left")
 welcome.grid(row=0, column=0, sticky="w", pady=20)
 
 book_img = Image.open("img/manual.png")
