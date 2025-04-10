@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
+import os
+
 def register():
     user = username_entry.get()
     pw = password_entry.get()
@@ -13,12 +15,12 @@ def register():
         messagebox.showerror("Error", "Passwords do not match.")
         return
 
-    # TODO: Save user data to DB
+    # TODO: Save user data to DBp
     messagebox.showinfo("Success", "Registered successfully!")
 
 def go_back():
-    root.destroy()
-    # TODO: Open login screen again
+    os.system("python app/views/login.py")
+    tk.destroy()
 
 root = tk.Tk()
 root.title("Trang đăng ký")
