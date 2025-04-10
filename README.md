@@ -281,5 +281,10 @@ Với giao diện trực quan, người dùng có thể yêu cầu nhân viên l
     - `System` và `Saving Account` phụ thuộc vào `InterestRateTerm` (để xác định và áp dụng lãi suất).
     - `System` phụ thuộc vào `User` (ví dụ: để lấy thông tin người dùng khi mở tài khoản).
 
+---
+
+## Cơ sở dữ liệu hệ thống
+![image](https://github.com/user-attachments/assets/83fc0ee2-713f-43e2-bb48-51896c8b53d3)
+
 
 
