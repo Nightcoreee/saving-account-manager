@@ -8,12 +8,13 @@
 |Nguyễn Ngọc Khôi | 3121411108|
 ## 📌 Giới Thiệu
 Ứng dụng quản lý sổ tiết kiệm giúp người dùng theo dõi và quản lý các khoản tiết kiệm cá nhân một cách dễ dàng.  
-Với giao diện trực quan, người dùng có thể:
+Với giao diện trực quan, người dùng có thể yêu cầu nhân viên làm những điều sau:
 - Mở sổ tiết kiệm
 - Gửi tiền vào sổ
 - Rút tiền khỏi sổ
 - Tính lãi suất
 - Đóng sổ tiết kiệm
+- Xem thống kê
 
 Ứng dụng phù hợp với cá nhân muốn theo dõi tình hình tiết kiệm của mình một cách chi tiết và hiệu quả. 🚀  
 
@@ -24,7 +25,8 @@ Với giao diện trực quan, người dùng có thể:
 ✅ **Gửi tiền vào sổ**: Cho phép nạp thêm tiền vào tài khoản tiết kiệm theo quy định.  
 ✅ **Rút tiền khỏi sổ**: Hỗ trợ rút một phần hoặc toàn bộ số tiền gửi.  
 ✅ **Tính lãi suất**: Tự động tính lãi suất dựa trên kỳ hạn và số dư tài khoản.  
-✅ **Đóng sổ tiết kiệm**: Kết thúc sổ tiết kiệm và hiển thị số tiền cuối cùng.  
+✅ **Đóng sổ tiết kiệm**: Xóa sổ tiết kiệm khỏi hệ thống. 
+✅ **Xem thống kê**: Xem thống kê trong năm đã gửi bao tiền và lời bao nhiêu tiền.
 
 ---
 
